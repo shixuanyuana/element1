@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+    <select id="selectAll" resultType="com.itheima.pojo.User">
+        select * from s_school;
+    </select>
+    <select id ="Frist"  resultType="com.itheima.pojo.Frist">
+        select * from c_course where id = 2;
+    </select>
+    <select id ="Second"  resultType="com.itheima.pojo.Second">
+        select * from c_course where sid=1;
+    </select>
+    <update id ="Thirda">
+        update c_course set hours=hours+4  where id=4;
+    </update>
+    <select id ="Third"  resultType="com.itheima.pojo.Third">
+        select * from c_course;
+    </select>
+    <insert id ="Fourtha">
+        insert into c_course value(5,'⼤数据存储',32,1);
+    </insert>
+    <select id ="Fourth"  resultType="com.itheima.pojo.Fourth">
+        select * from c_course;
+    </select>
+    <select id ="Fifth"  resultType="com.itheima.pojo.Fifth">
+        select * from c_course;
+    </select>
+</mapper>
